@@ -1,0 +1,19 @@
+{
+  "name": "platzipics",
+  "version": "1.0.0",
+  "description": "Sistema escritorio electron para visualizar imagenes",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"electron src/index.js"
+  },
+  "keywords": [
+    "electron",
+    "framework"
+  ],
+  "author": "Santiago Guzman <santiago_guzmanprada@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^13.2.1"
+  }
+}
