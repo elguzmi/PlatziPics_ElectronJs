@@ -5,14 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hola mundo</title>
+    <link rel="stylesheet" href="../assets/css/photon.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <script src="./frontend.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Hola soy app de electron</h1>
-    </header>
-    <p id="mensaje"></p>
-    <button id="button">Aprieta aca</button>
+    <div class="window">
+        <div class="window-content">
+          <div class="pane-group">
+            <div class="pane-sm sidebar">
+                <ul class="list-group">
+                    <li class="list-group-header">
+                      <input class="form-control" type="text" placeholder="Search for someone">
+                    </li>
+                    <li class="list-group-item">
+                      <img class="media-object pull-left" src="../assets/images/1.jpg" height="34">
+                      <div class="media-body">
+                        <strong>1.jpg</strong>
+                        <p>1 mb</p>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="media-object pull-left" src="../assets/images/2.jpg" height="34">
+                        <div class="media-body">
+                          <strong>2.jpg</strong>
+                          <p>5 mb</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="media-object pull-left" src="../assets/images/3.jpg" height="34">
+                        <div class="media-body">
+                          <strong>3.jpg</strong>
+                          <p>30 mb</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="media-object pull-left" src="../assets/images/4.jpg" height="34">
+                        <div class="media-body">
+                          <strong>4.jpg</strong>
+                          <p>10 mb</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img class="media-object pull-left" src="../assets/images/5.jpg" height="34">
+                        <div class="media-body">
+                          <strong>5.jpg</strong>
+                          <p>6 mb</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="pane">
+                <div class="image-view full-height">
+                    <header class="toolbar toolbar-header image-toolbar">
+                        <div class="toolbar-actions">
+                            <div class="btn-group">
+                              <button class="btn btn-default">
+                                <span class="icon icon-folder icon-text"></span>
+                                Abrir Ubicacion 
+                              </button>
+                            </div>
+                            
+                            <div class="btn-group pull-right">
+                                <label for="Filter" class="filter-label">Filtros:</label>
+                                <select name="" id="filters" class="f">
+                                    <option value="none">Ninguno</option>
+                                    <option value="none">Sepia</option>
+                                    <option value="none">Ninguno</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-default">
+                                <span class="icon icon-download icon-text"></span>
+                                Guardar
+                            </button>
+                        </div>
+                    </header>
+                    <!-- contenedor para la imagen principal -->
+                    <div>   
+                        <img id="image-displayed" src="../assets/images/1.jpg" alt="image1">
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+        <footer class="toolbar toolbar-footer">
+            <h1 class="title">Footer</h1>
+        </footer>
+      </div>
+    
 </body>
 </html>

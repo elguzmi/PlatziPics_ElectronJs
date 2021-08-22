@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"electron src/index.js"
+    "dev": "electron src/index.js",
+    "lint": "standard"
   },
   "keywords": [
     "electron",
@@ -15,5 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "electron": "^13.2.1"
+  },
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "standard": "^16.0.3"
   }
 }
