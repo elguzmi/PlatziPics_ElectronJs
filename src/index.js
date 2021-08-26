@@ -14,8 +14,13 @@ app.on('before-quit' , ()=>{
 
 //evento ready
 app.on('ready',()=>{
-    //creando una ventana, el objeto browsr window permite crear una ventana
+    //creando una ventana, el objeto browser window permite crear una ventana
     let win = new BrowserWindow({
+        webPreferences:{
+            contextIsolation: false,
+            nodeIntegration: true,
+            nodeIntegrationInWorker: true,
+            enableRemoteModule: true},
         width: 1024,
         height: 768,
         maxHeight: 768,
