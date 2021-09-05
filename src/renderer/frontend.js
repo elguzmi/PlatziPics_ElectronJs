@@ -3,13 +3,35 @@ const os = require('os');
 const path = require('path');
 const { link } = require('fs');
 import applyFilter from './filters.js'; 
+//import de ipc renderer events 
+import  { setIpc, sendIpc , abrirDirectorio , setDirectory}  from  './ipcRendererEvents.js';
+
+
 
 window.addEventListener('load',()=>{
+    //configura el evento pong
+    /* setIpc();  */  //se ejecuta la funcion para escuchar al pong
+    setDirectory();
     addImagesEvent();
     searchImagesEvent();
     changeImage('undefined');
     selectEvent();
+    /* openDirectory(); */
+    ButtonEvent('openDirectory' , abrirDirectorio);
 });
+
+function ButtonEvent(id, func){
+    const directory =  document.getElementById(id);
+    directory.addEventListener('click', func )
+}
+
+
+function openDirectory() {
+    const directory = document.getElementById('openDirectory');
+    directory.addEventListener('click', ()=>{
+        sendIpc(); //ejecutar la funcion
+    })
+}
 
 const addImagesEvent = ()=>{
     const thumbs = document.querySelectorAll('li.list-group-item');
@@ -43,9 +65,10 @@ function changeImage(node) {
     }else{
         document.querySelector('#image-displayed').alt = 'No has seleccionado ninguna imagen'
         document.querySelector('#image-displayed').src = '';
-    }
-    
+    } 
 }
+
+
 
 //evento de buscar imagen
 function searchImagesEvent() {

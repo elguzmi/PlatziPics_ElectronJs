@@ -1,0 +1,7 @@
+Proceso principal el proceso de node
+
+main process y el rendered proccess
+
+
+IpcMain => preotocolo de comunicacion principal
+IpcRenderer => el que renderiza los front
